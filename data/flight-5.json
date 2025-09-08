@@ -1,0 +1,139 @@
+{
+  "flights": [
+    {
+      "flight_id": "AI202",
+      "airline": "Air India",
+      "departure": {
+        "airport": "DEL",
+        "city": "New Delhi",
+        "country": "India",
+        "date": "2025-03-19",
+        "time": "06:30"
+      },
+      "arrival": {
+        "airport": "BOM",
+        "city": "Mumbai",
+        "country": "India",
+        "date": "2025-03-19",
+        "time": "08:00"
+      },
+      "status": "On Time",
+      "aircraft": { "model": "Boeing 787", "capacity": 256 },
+      "cabin_class": "Economy",
+      "price": { "currency": "INR", "amount": 5000 },
+      "flight_duration": "1h 30m",
+      "baggage_allowance": {
+        "carry_on": "1 bag (7 kg)",
+        "checked": "1 bag (20 kg)"
+      }
+    },
+    {
+      "flight_id": "AI305",
+      "airline": "Air India",
+      "departure": {
+        "airport": "MAA",
+        "city": "Chennai",
+        "country": "India",
+        "date": "2025-03-20",
+        "time": "09:15"
+      },
+      "arrival": {
+        "airport": "BLR",
+        "city": "Bengaluru",
+        "country": "India",
+        "date": "2025-03-20",
+        "time": "10:20"
+      },
+      "status": "Delayed",
+      "aircraft": { "model": "Airbus A320", "capacity": 180 },
+      "cabin_class": "Economy",
+      "price": { "currency": "INR", "amount": 3500 },
+      "flight_duration": "1h 05m",
+      "baggage_allowance": {
+        "carry_on": "1 bag (7 kg)",
+        "checked": "1 bag (15 kg)"
+      }
+    },
+    {
+      "flight_id": "6E410",
+      "airline": "IndiGo",
+      "departure": {
+        "airport": "BLR",
+        "city": "Bengaluru",
+        "country": "India",
+        "date": "2025-03-21",
+        "time": "14:00"
+      },
+      "arrival": {
+        "airport": "CCU",
+        "city": "Kolkata",
+        "country": "India",
+        "date": "2025-03-21",
+        "time": "16:45"
+      },
+      "status": "On Time",
+      "aircraft": { "model": "Airbus A321", "capacity": 220 },
+      "cabin_class": "Economy",
+      "price": { "currency": "INR", "amount": 4200 },
+      "flight_duration": "2h 45m",
+      "baggage_allowance": {
+        "carry_on": "1 bag (7 kg)",
+        "checked": "1 bag (15 kg)"
+      }
+    },
+    {
+      "flight_id": "UK151",
+      "airline": "Vistara",
+      "departure": {
+        "airport": "DEL",
+        "city": "New Delhi",
+        "country": "India",
+        "date": "2025-03-22",
+        "time": "11:30"
+      },
+      "arrival": {
+        "airport": "GOI",
+        "city": "Goa",
+        "country": "India",
+        "date": "2025-03-22",
+        "time": "13:45"
+      },
+      "status": "Cancelled",
+      "aircraft": { "model": "Airbus A320neo", "capacity": 186 },
+      "cabin_class": "Economy",
+      "price": { "currency": "INR", "amount": 4800 },
+      "flight_duration": "2h 15m",
+      "baggage_allowance": {
+        "carry_on": "1 bag (7 kg)",
+        "checked": "1 bag (20 kg)"
+      }
+    },
+    {
+      "flight_id": "SG401",
+      "airline": "SpiceJet",
+      "departure": {
+        "airport": "HYD",
+        "city": "Hyderabad",
+        "country": "India",
+        "date": "2025-03-23",
+        "time": "07:45"
+      },
+      "arrival": {
+        "airport": "DEL",
+        "city": "New Delhi",
+        "country": "India",
+        "date": "2025-03-23",
+        "time": "10:05"
+      },
+      "status": "On Time",
+      "aircraft": { "model": "Boeing 737", "capacity": 210 },
+      "cabin_class": "Economy",
+      "price": { "currency": "INR", "amount": 3900 },
+      "flight_duration": "2h 20m",
+      "baggage_allowance": {
+        "carry_on": "1 bag (7 kg)",
+        "checked": "1 bag (15 kg)"
+      }
+    }
+  ]
+}
