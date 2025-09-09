@@ -164,6 +164,8 @@ export const Main = () => {
     // fetch static json from GitHub Pages
     const response = await axios.get("https://kichuproject.github.io/Flight-React/flight.json")
     const allFlights = response.data.flights || response.data; // check if array wrapped
+    console.log(response.data.flights)
+    console.log(response.data)
 
     // filter based on userdata
     const filteredFlights = allFlights.filter(flight =>
