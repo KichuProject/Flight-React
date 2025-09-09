@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  font-family: "Poppins", sans-serif ;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: #222429;
   background-color: #f6faff;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,70 +17,149 @@
   --card-design-background:#f6fafd;
   --btn-backgroundcolor:#71c979;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: 100vh;
   font-family: "Poppins", sans-serif !important;
 }
-.sidebar{
-  width: 200px;
-  height: 100vh;
-  margin: 0px 10px;
+
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 25px;
+  left: 0px;
+  z-index: 1100;
+  display: block;
+  color: #4690f6;
 }
-.sidebar-links ul{
+
+.hamburger:hover {
+  color: #71c979;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background: #ffffff;
+  color: #333;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 20px 10px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-links ul {
   list-style: none;
-  padding: 0px;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 }
-.sidebar-links ul li{
-  margin :15px 0;
-  padding: 8px 0px;
+
+.sidebar-links ul li {
+  margin: 15px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
 }
-.sidebar-links ul li.active{
-  background-color:var(--sidebar-active);
-  border-radius: 10px;
-  color: #fff;
-}
-.sidebar-links ul li.active a{
-  color: #fff;
-}
-.sidebar-links ul li a{
-  color: black;
+
+.sidebar-links ul li a {
+  color: #333;
   text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.main-container{
+
+.sidebar-links ul li:hover {
+  background-color: #f0f4ff;
+}
+.sidebar-links ul li:hover a {
+  color: var(--sidebar-active);
+}
+
+.sidebar-links ul li.active {
+  background-color: var(--sidebar-active);
+}
+.sidebar-links ul li.active a {
+  color: #fff !important;
+}
+
+.sidebar-links ul li a i {
+  font-size: 18px;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.main-container {
   width: 100%;
   background-color: var(--main-bg-color);
   padding: 15px;
 }
-.card-design{
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .sidebar {
+    transform: translateX(0);
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    box-shadow: none;
+  }
+  .main-container {
+    margin-left: 220px;
+  }
+}
+
+.card-design {
   border: var(--card-design-border) !important;
   background-color: var(--card-design-background);
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0);
 }
-.fs-7{
+
+.fs-7 {
   font-size: 12px !important;
 }
-.flight-img{
+
+.flight-img {
   width: 100%;
   height: 300px;
   object-fit: contain;
   border-radius: 10px;
 }
-.btn-color{
+
+.btn-color {
   background-color: var(--btn-backgroundcolor) !important;
   color: #fff;
   border-color: var(--btn-backgroundcolor) !important;
 }
-.form-label{
+
+.form-label {
   font-size: 12px;
   font-weight: 500;
 }
-.form-control{
+.form-control {
   border: 1px solid grey !important;
 }
-.form-control:focus{
+.form-control:focus {
   box-shadow: none !important;
 }

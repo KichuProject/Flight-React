@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Sidebar = () => {
+    const [sidebar,setsidebar]=useState(false)
   return (
-    <div className='sidebar'>
+
+    <div>
+        <button className="hamburger" onClick={() => setsidebar(!sidebar)}>&#9776;</button>
+        <div className={`sidebar ${sidebar ? 'open' : ''}`}>
             <div className='d-flex flex-column align-items-center justify-content-between h-100'>
         <div className='w-100'>
             <h5 className='py-3 text-center'>RK Flight</h5>
@@ -24,5 +28,7 @@ export const Sidebar = () => {
             </nav>
         </div>
     </div>
+    </div>
+    
   )
 }
