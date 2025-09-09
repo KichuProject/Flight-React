@@ -44,18 +44,16 @@ export const Main = () => {
 
   const getapidata=async()=>{
     setnotfoundloading(flightloading)
-    const response=await axios.get("flight.json")
-    console.log(response.data.flights);
-    
-    // if(response.data.length>0){
-    //   setflight(response.data)
-    //   setsingedata(response.data[0])
-    //   setloading(false)
-    // }
-    // else{
-    //   setloading(true)
-    //   setnotfoundloading(notfoundflightloading)
-    // }
+    const response=await axios.get(`http://localhost:3000/flights?departure.city=${userdata.from}&arrival.city=${userdata.to}&departure.date=${userdata.date}&cabin_class=${userdata.cabin_class}&airline=${userdata.airline}&min_price=${userdata.min_price}`)
+    if(response.data.length>0){
+      setflight(response.data)
+      setsingedata(response.data[0])
+      setloading(false)
+    }
+    else{
+      setloading(true)
+      setnotfoundloading(notfoundflightloading)
+    }
     
   }
 
